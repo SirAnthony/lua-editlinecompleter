@@ -1,0 +1,47 @@
+                             rlcompleter
+                             -----------
+
+                              release 3
+                (c) 2012 Sir Anthony <anthony at adsorbtion.org>
+                (c) 2011 Reuben Thomas <rrt@sc3d.org>
+                        (c) 2007 Steve Donovan
+                         (c) 2004 Jay Carlson
+
+
+This is adaptation of rlcompleter for libedit with BSD license instead
+readline with GPL. You need to have BSD Editline library (or port) to 
+use.
+
+Original rtcompleter: https://github.com/rrthomas/lua-rlcompleter
+With history patches: https://github.com/SirAnthony/lua-rlcompleter
+
+rlcompleter provides readline completion to the Lua interpreter and 
+its history bindings. It is copyright Jay Carlson 2004 and copyright 
+Reuben Thomas 2011, editline adaptation by Sir Anthony 2012. It is 
+released under the MIT license. There is no warranty.
+
+
+Please report bugs and make suggestions to the github:
+https://github.com/SirAnthony/lua-editlinecompleter and pages
+addressed above.
+
+
+Installation
+------------
+
+    make
+
+You may well need to edit the Makefile, which has only been tested on
+Linux; patches to make it more general are welcome. Install
+rlcompleter.lua and rlcompleter_c.so (or equivalent) on LUA_PATH and
+LUA_CPATH respectively.
+
+
+Use
+---
+
+require "rlcompleter"
+
+You may want to put this in your LUA_INIT. Then in the interpreter
+(which must have been built with LUA_USE_READLINE) you can press Tab
+to complete the current identifier.
